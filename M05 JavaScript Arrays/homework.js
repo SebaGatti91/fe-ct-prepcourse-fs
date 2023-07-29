@@ -113,6 +113,21 @@ function multiplicarArgumentos() {
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
 
+   if (arguments.length === 0){
+      return 0;
+   }
+
+   else if (arguments.length === 1){
+      return arguments[0];
+   }
+
+   else {
+   var producto = 1;
+   for (var i = 0; i < arguments.length; i++) {
+      producto *= arguments[i];
+   }
+   return producto;
+   }
 }
 
 
@@ -206,6 +221,8 @@ function tablaDelSeis() {
    }
  
    return resultados;
+
+
 }
 
 
@@ -271,7 +288,7 @@ function continueStatement(num) {
     
        suma += 2; // Sumar en las otras iteraciones
        nuevosValores.push(suma);
-   }
+   };
  
    return nuevosValores;
 }
